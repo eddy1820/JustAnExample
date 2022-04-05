@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class CurrencyRepository @Inject constructor(private val currencyDao: CurrencyDao) {
 
-  fun getAllCurrency(): Flow<List<CurrencyInfo>> {
+  suspend fun getAllCurrency(): Flow<List<CurrencyInfo>> {
     return currencyDao.getAllCurrency()
   }
 }
