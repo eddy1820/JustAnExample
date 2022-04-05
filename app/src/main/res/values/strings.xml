@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JustAnExample</string>
+    <string name="display">display</string>
+    <string name="sort">sort</string>
+</resources>
