@@ -40,14 +40,10 @@ class CurrencyAdapter(private val onItemClick: (CurrencyInfo) -> Unit) :
       if (currentList.isEmpty()) return
       if (isSortById) {
         isSortById = false
-        currentList.map { it }.sortedBy { it.name }.let {
-          submitList(it)
-        }
+        submitList(currentList.sortedBy { it.name })
       } else {
         isSortById = true
-        currentList.map { it }.sortedBy { it.id }.let {
-          submitList(it)
-        }
+        submitList(currentList.sortedBy { it.id })
       }
     }
   }
